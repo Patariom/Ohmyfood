@@ -19,40 +19,41 @@
 <body>
 
     <!--///// Header /////-->
-    <header>
-        <img src="public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" />
+    <header class="header">
+        <img class="header__logo" src="public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" />
     </header>
 
     <!--///// Info localisation /////-->
     <section class="info-localisation">
-        <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Paris, Belleville</p>
     </section>
 
     <!--///// Search restaurants /////-->
     <section class="search-restaurants">
-        <h1>Réserver le menu qui vous convient</h1>
-        <p>Découvrer des restaurants d'exception, sélectionnés par nos soins</p>
-        <button class="search-button">Explorer nos restaurants</button>
+        <h1 class="search-restaurants__heading">Réserver le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <button class="button--gradient">Explorer nos restaurants</button>
     </section>
 
     <!--///// Explain operation /////-->
     <section class="explain-operation">
-        <h2>Fonctionnement</h2>
-        <div>
+        <h2 class="explain-operation__heading">Fonctionnement</h2>
+        <div class="explain-operation__list">
             <div class="explain-step">
-                <p>1</p>
-                <i class="fas fa-mobile-alt"></i>
-                <p>Choisissez un restaurant</p>
+                <p class="explain-step__number">1</p>
+                <i class="fas fa-mobile-alt explain-step__icon"></i>
+                <p class="explain-step__instruction">Choisissez un restaurant</p>
             </div>
             <div class="explain-step">
-                <p>2</p>
-                <i class="fas fa-list-ul"></i>
-                <p>Composez votre menu</p>
+                <p class="explain-step__number">2</p>
+                <i class="fas fa-list-ul explain-step__icon"></i>
+                <p class="explain-step__instruction">Composez votre menu</p>
             </div>
             <div class="explain-step">
-                <p>3</p>
-                <i class="fas fa-store"></i>
-                <p>Déguster au restaurant</p>
+                <p class="explain-step__number">3</p>
+                <i class="fas fa-store explain-step__icon"></i>
+                <p class="explain-step__instruction">Déguster au restaurant</p>
             </div>
         </div>
     </section>
@@ -62,21 +63,23 @@
         <h2>Restaurants</h2>
         <div>
             <article class="restaurant-card">
-                <a href="#"></a>
-                <div class="restaurant-card__image">
-                    <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                <a href="#">
+                    <div class="restaurant-card__image">
+                        <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                         alt="La palette du goût" />
-                    <p>Nouveau</p>
-                </div>
-                <div class="restaurant-card__info">
-                    <div class="restaurant-card__info__text">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                        <div class="restaurant-card__image--markernew">
+                            <p>Nouveau</p>
+                        </div>
                     </div>
-                    <div class="restaurant-card__info__like">
-                        <i class="far fa-heart"></i>
+                    <div class="restaurant-card__info">
+                        <div class="restaurant-card__info__text">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurant-card__info__like">
+                            <i class="far fa-heart icon-like"></i>
+                        </div>
                     </div>
-                </div>
                 </a>
             </article>
             <article class="restaurant-card">
@@ -132,13 +135,25 @@
             </article>
         </div>
     </section>
-    <footer>
-        <img src="public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" />
-        <p><i class="fas fa-utensils"></i>Proposer un restaurant </p>
-        <p><i class="fas fa-hands-helping"></i>Devenir partenaire </p>
-        <p>Mentions légales</p>
-        <p>Contact</p>
+
+    <!--///// Footer /////-->
+    <footer class="footer">
+        <h4 class="footer__heading">ohmyfood</h4>
+            <div class="footer__nav">
+                <i class="fas fa-utensils footer__nav__icons"></i>
+                <p>Proposer un restaurant</p>
+            </div>
+            <div class="footer__nav">
+                <i class="fas fa-hands-helping footer__nav__icons"></i>
+                <p>Devenir partenaire</p>
+            </div>
+        <div class="footer__info">
+            <p>Mentions légales</p>
+            <p>Contact</p>
+        </div>
+
     </footer>
+
 </body>
 
 </html>
