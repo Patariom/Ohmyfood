@@ -1,0 +1,36 @@
+.footer {
+    width: 100%;
+    padding: 5% 5%;
+    background-color: darken($white, 75%);
+    color: $white;
+    & p {
+        margin: 5px 0px;
+    }
+    &__heading {
+        margin: 0px 0px 15px 0px;
+        @include cursive-heading;
+        font-size: 18px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        font-weight: map-get($font-weight, medium);
+        &__icons {
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+            overflow: hidden;
+        }
+    }
+    &__info {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
