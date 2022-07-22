@@ -95,7 +95,7 @@ body {
   gap: 10px;
 }
 
-/* Info Localisation Section */
+/* Info Localisation Div */
 .info-localisation {
   display: flex;
   align-items: center;
@@ -246,7 +246,7 @@ body {
 
 .restaurant-card__info {
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   height: auto;
   min-height: 75px;
   padding: 15px;
