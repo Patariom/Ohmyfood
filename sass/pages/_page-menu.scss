@@ -1,0 +1,89 @@
+.page-restaurant__image {
+    position : relative;
+    width: 100%;
+    height: 250px;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    position: relative;
+    top : -20px;
+    margin-bottom: -20px;
+    background-color: darken($white, 6%);
+    border-radius: 25px 25px 0px 0px;
+    padding: 2% 5% 5% 5%;
+    &__heading {
+        display: flex;  
+        align-items: center; 
+        margin: auto; 
+        & h1 {
+            width: 85%;
+            @include cursive-heading;
+        }
+        & i {
+            width: 15%;
+        }
+    }
+    &__orderbtn {
+        display: flex;
+        justify-content: center;
+    }
+}
+    
+.course-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    &__heading {
+        width: 45px;
+        margin: 1% 0%;
+        padding: 10px 0px;
+        border-bottom: 4px solid $color-tertiary;
+        font-size: 18px; 
+        font-weight: map-get($font-weight, light);
+        text-transform: uppercase;
+    }
+}
+
+.course-card {
+    display: flex;
+    flex-direction: row;
+    margin: 3% 0%;
+    padding: 2%;
+    background-color: $white;
+    border-radius: 15px;
+    &__info {
+        width: 85%;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    &__info h3 {
+        margin: 5px;
+        font-weight: map-get($font-weight,medium);
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    &__info p {
+        margin: 5px;
+        font-weight: map-get($font-weight,light);
+        font-size: 15px;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        width: 15%;
+    }
+    &__price p {
+        margin: 5px;
+        font-weight: map-get($font-weight,medium);
+    }
+}

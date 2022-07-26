@@ -23,7 +23,7 @@ a {
   font-family: "Shrikhand", cursive;
 }
 
-.button--gradient {
+.button-gradient {
   margin: 8% 0%;
   padding: 10px 20px;
   height: 3.25rem;
@@ -35,9 +35,18 @@ a {
   box-shadow: 0px 5px 8px #d5d5d5;
   transition: 0.3s;
 }
-.button--gradient:hover {
+.button-gradient:hover {
   opacity: 0.88;
   box-shadow: 0px 5px 8px #afafaf;
+}
+.button-gradient--long {
+  width: 50%;
+  max-width: 250px;
+}
+
+.button-like {
+  width: 10%;
+  font-size: 25px;
 }
 
 .icon-like {
@@ -51,13 +60,26 @@ body {
 }
 
 .header {
-  width: 100%;
+  padding: 2%;
 }
 .header__logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  margin: 0;
+}
+.header--witharrow {
+  position: relative;
+}
+.header__returnarrow {
   display: flex;
-  margin: auto;
-  width: 50%;
-  padding: 4%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+  height: 20px;
+  width: 20px;
+  top: 35%;
+  font-size: 20px;
 }
 
 .footer {
@@ -234,8 +256,8 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 12px;
   width: 80px;
   height: 30px;
   border-radius: 2px;
@@ -260,6 +282,96 @@ body {
 }
 .restaurant-card__info h3, .restaurant-card__info p {
   margin: 0px;
+}
+
+.page-restaurant__image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.page-restaurant__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  top: -20px;
+  margin-bottom: -20px;
+  background-color: #f0f0f0;
+  border-radius: 25px 25px 0px 0px;
+  padding: 2% 5% 5% 5%;
+}
+.menu__heading {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.menu__heading h1 {
+  width: 85%;
+  font-family: "Shrikhand", cursive;
+}
+.menu__heading i {
+  width: 15%;
+}
+.menu__orderbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.course-list__heading {
+  width: 45px;
+  margin: 1% 0%;
+  padding: 10px 0px;
+  border-bottom: 4px solid #99E2D0;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: row;
+  margin: 3% 0%;
+  padding: 2%;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.course-card__info {
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.course-card__info h3 {
+  margin: 5px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.course-card__info p {
+  margin: 5px;
+  font-weight: 300;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.course-card__price {
+  display: flex;
+  align-items: flex-end;
+  width: 15%;
+}
+.course-card__price p {
+  margin: 5px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
