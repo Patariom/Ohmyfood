@@ -8,6 +8,7 @@
     color: white;
     font-weight: map-get($font-weight,medium);
     box-shadow: 0px 5px 8px $shadow;
+    cursor: pointer;
     transition: 0.3s;
     &:hover {
         opacity: 0.88;
@@ -20,6 +21,10 @@
 }
     
 .button-like {
-    width: 10%;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
     font-size: 25px;
+    text-align: center;
+    cursor: pointer;
     }

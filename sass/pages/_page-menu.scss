@@ -24,9 +24,6 @@
             width: 85%;
             @include cursive-heading;
         }
-        & i {
-            width: 15%;
-        }
     }
     &__orderbtn {
         display: flex;

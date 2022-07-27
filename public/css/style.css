@@ -33,6 +33,7 @@ a {
   color: white;
   font-weight: 500;
   box-shadow: 0px 5px 8px #d5d5d5;
+  cursor: pointer;
   transition: 0.3s;
 }
 .button-gradient:hover {
@@ -45,8 +46,12 @@ a {
 }
 
 .button-like {
-  width: 10%;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
   font-size: 25px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .icon-like {
@@ -311,9 +316,6 @@ body {
 .menu__heading h1 {
   width: 85%;
   font-family: "Shrikhand", cursive;
-}
-.menu__heading i {
-  width: 15%;
 }
 .menu__orderbtn {
   display: flex;
