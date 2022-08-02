@@ -57,6 +57,25 @@
     transform: scale(1.05);
   }
 }
+/* Checkout */
+@keyframes checkout {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.63, 1.23, 0.96, 0.92);
+  }
+}
+@keyframes price-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+    animation-timing-function: cubic-bezier(0.63, 1.23, 0.96, 0.92);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -132,11 +151,6 @@ a {
   background: linear-gradient(to right bottom, #FF79DA, #9356dc);
   background-clip: text;
   transform-origin: bottom;
-}
-
-.icon-like {
-  width: 30px;
-  height: 30px;
 }
 
 body {
@@ -409,47 +423,68 @@ body {
 }
 .course-list__heading {
   position: relative;
-  width: 45px;
   margin: 4% 0% 2% 0%;
   padding: 10px 0px;
-  border-bottom: 4px solid #99E2D0;
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
+}
+.course-list__heading::after {
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #99E2D0;
 }
 
 .course-card {
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   margin: 3% 0%;
   padding: 0;
-  /** A la base c'est 2% padding **/
   background-color: #ffffff;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
 }
 .course-card:hover > .course-card__checkout {
-  animation: checkout 1000ms both;
+  animation: checkout 800ms both;
+}
+.course-card:hover > .course-card__checkout::after {
+  transform: rotate(360deg);
 }
 .course-card__info {
-  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  width: 150%;
   margin: 2%;
+  gap: 2%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.course-card__info h3 {
-  margin: 5px;
+.course-card__description {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.course-card__description h3 {
+  margin: 0;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.course-card__info p {
-  margin: 5px;
+.course-card__description p {
+  margin: 0;
   font-weight: 300;
   font-size: 15px;
   white-space: nowrap;
@@ -459,13 +494,30 @@ body {
 .course-card__price {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  width: 15%;
-  margin: 2%;
 }
 .course-card__price p {
-  margin: 5px;
+  margin: 0;
   font-weight: 500;
+}
+.course-card__checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 60px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
+  transform-origin: right;
+  transform: translateX(100%);
+}
+.course-card__checkout::after {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  content: "\f058";
+  color: #ffffff;
+  transition: transform 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
 }
 
 /*# sourceMappingURL=style.css.map */

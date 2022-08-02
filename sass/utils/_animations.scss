@@ -53,3 +53,24 @@
         transform: scale(1.05);
     }
 }
+
+/* Checkout */
+@keyframes checkout {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+        animation-timing-function: cubic-bezier(.63,1.23,.96,.92);
+    }
+}
+
+@keyframes price-slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+        animation-timing-function: cubic-bezier(.63,1.23,.96,.92);
+    }
+}
