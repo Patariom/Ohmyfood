@@ -1,0 +1,136 @@
+.loading-spinner-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $white;
+    animation: loading-appear 5s 500ms both ease-in-out;
+    z-index: 21;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.loading-spinner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: $gradient-loader;
+    animation: rotate-gradient 3s infinite;
+    &::before {
+        position: absolute;
+        content:"";
+        width: 85%;
+        height:85%;
+        background-color: $white;
+        border-radius: 50%;
+    }
+    &__icons{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        border: 4px solid lighten($color-tertiary,10%);
+        background-color: $color-tertiary;
+        margin: 0% 2%;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 3;
+        &::before {
+            position: absolute;
+            display: flex;
+            width: 93%;
+            height: 93%;
+            border-radius: 50%;
+            border-bottom: 2px solid $white;
+            background-color: transparent;
+            transform: rotate(-25deg);
+            content:"";
+        }
+        &::after {
+            position: absolute;
+            display: flex;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            border: 4px solid $white;
+            background-color: darken($color-tertiary,10%);
+            content:"";
+        }
+        .icons1 {
+            width: 25%;
+            height: 25%;
+            z-index:1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before {
+            position: absolute;
+            top: 35%;
+            right: 31%;
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 55px;
+            content:"\f578";
+            color: $white;
+            transform: translateY(-150px);
+            animation: icons-moving 800ms both;
+            }
+            &::after {
+            width: auto;
+            height: auto;
+            z-index:1;
+            position: absolute;
+            top: 35%;
+            right: 34%;
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 55px;
+            content:"\f7ec";
+            color: $white;
+            transform: translateY(-150px);
+            animation: icons-moving 800ms 800ms both;
+            }
+        }
+        .icons2 {
+            width: auto;
+            height: auto;
+            z-index:1;
+            &::before {
+            position: absolute;
+            top: 35%;
+            right: 35%;
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 55px;
+            content:"\f7ef";
+            color: $white;
+            transform: translateY(-150px);
+            animation: icons-moving 800ms 1600ms both;
+            }
+            &::after {
+            position: absolute;
+            top: 30%;
+            right: 37%;
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 55px;
+            content:"\f5d1";
+            color: $white;
+            transform: translateY(-150px);
+            animation: icons-moving 800ms 2400ms both;
+            }
+        }
+    }
+}

@@ -58,7 +58,6 @@
 .course-card {
     position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     margin: 3% 0%;
@@ -68,15 +67,16 @@
     overflow: hidden;
     cursor: pointer;
     &:hover > &__checkout {
-        animation: checkout 800ms both;
+        margin-right: 0px;
         &::after {
-            transform: rotate(360deg);
+        transform: rotate(360deg);
         }
         }
     &__info {
         display: flex;
+        flex: 1;
         justify-content: space-between;
-        width: 150%;
+        width: 100%;
         margin: 2%;
         gap: 2%;
         white-space:nowrap;
@@ -84,11 +84,10 @@
         text-overflow: ellipsis;
     }
     &__description {
-        display: flex;
-        flex-direction: column;
         white-space:nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        width: 100%;
         & h3 {
             margin: 0;
             font-size: 16px;
@@ -109,6 +108,7 @@
     &__price {
         display: flex;
         align-items: flex-end;
+        width: 15%;
             & p {
             margin: 0;
             font-weight: map-get($font-weight,medium);
@@ -120,13 +120,14 @@
         align-items: center;
         justify-content: center;
         height: auto;   
-        width: 60px;   
+        width: 60px;  
+        margin-right: -60px;
         border-radius: 0px 15px 15px 0px;
         background-color: $color-tertiary; 
-        transform-origin: right;
-        transform: translateX(100%);
+        transition: margin-right 800ms cubic-bezier(.63,1.23,.96,.92);
         &::after {
             display: inline-block;
+            margin: auto;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             font-size: 25px;

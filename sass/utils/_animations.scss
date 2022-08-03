@@ -54,23 +54,60 @@
     }
 }
 
-/* Checkout */
-@keyframes checkout {
-    0% {
-        transform: translateX(100%);
+
+/* Loading */
+@keyframes loading-appear {
+    50% {
+        opacity: 1;
+    }
+
+    99% {
+        z-index: 21;
     }
     100% {
-        transform: translateX(0%);
-        animation-timing-function: cubic-bezier(.63,1.23,.96,.92);
+        opacity: 0;
+        z-index: -20;
+      }
+  }
+
+@keyframes rotate-gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
-
-@keyframes price-slide {
+@keyframes icons-moving {
     0% {
-        transform: translateX(0%);
+        transform: translateY(-150px);
+        opacity: 0;
+        animation-timing-function: cubic-bezier(.5,.78,.83,.67);
     }
+    40% {
+        transform: translateY(-10px);
+        opacity: 1;
+    
+    }
+    60% {
+        transform: translateY(-10px);
+        opacity: 1;
+        
+    }
+    70% {
+        transform: rotate(10deg);
+    }
+    71% {
+        transform: rotate(-10deg);
+    }
+    80% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+
     100% {
-        transform: translateX(-100%);
-        animation-timing-function: cubic-bezier(.63,1.23,.96,.92);
+        transform: translateY(+150px);
+        opacity: 0;
+        animation-timing-function: cubic-bezier(.5,.78,.83,.67);
     }
 }
