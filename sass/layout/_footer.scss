@@ -3,6 +3,12 @@
     padding: 5% 5%;
     background-color: darken($white, 75%);
     color: $white;
+    @include desktop-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    } 
     & p {
         margin: 5px 0px;
     }
@@ -10,6 +16,9 @@
         margin: 0px 0px 15px 0px;
         @include cursive-heading;
         font-size: 18px;
+        @include desktop-responsive {
+            font-size: 26px;
+        } 
     }
     &__nav {
         display: flex;
@@ -29,6 +38,18 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        @include desktop-responsive {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 80px;
+            & a {
+                width: 140px;
+            }
+            & :nth-child(1) {
+                text-align: end;
+            }
+        } 
     }
 }
 

@@ -1,7 +1,7 @@
 .button-gradient {
-    margin: 8% 0%;
+    margin: 50px 0px;
     padding: 10px 20px;
-    height: 3.25rem;
+    height: 50px;
     border: none;
     border-radius: 50px;
     background: $gradient;
@@ -16,6 +16,7 @@
     }
     &--long {
         width: 50%;
+        min-width: 150px;
         max-width: 250px;
     }
 }

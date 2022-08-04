@@ -7,9 +7,15 @@ $shadow : #d5d5d5;
 
 /* Gradient */
 $gradient : linear-gradient(to right bottom, $color-secondary, $color-primary);
-$gradient-loader : linear-gradient(to top, $color-secondary, lighten($color-primary,22%));
+$gradient-loader : linear-gradient(to top, $color-secondary, lighten($color-primary,30%));
 
 /* Width */
 $mainwidth: 90%;
 
 /* Animation delay */
+
+/* Responsive */
+$breakpoints:(
+    tablet: 768px,
+    desktop: 1024px,
+);

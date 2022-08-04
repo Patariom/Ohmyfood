@@ -37,9 +37,9 @@
 .explain-operation {
     width: $mainwidth;
     margin: auto;
-    padding-bottom: 40px;
+    padding : 50px 0px;
     &__heading {
-        margin: 10% 0% 5% 0%;
+        margin: 10px 0px;
         @include index-heading;
     }
     &__list {
@@ -47,7 +47,13 @@
         flex-direction: column;
         justify-content: space-evenly;
         width: 95%;
+        padding-bottom: 20px;
         margin: auto;
+        @include desktop-responsive {
+            width: 98%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -60,7 +66,11 @@
     background-color: darken($white, 3%);
     @include object-shadow;
     border-radius: 20px; 
-    transition: 0.3s;   
+    transition: 0.3s;
+    @include desktop-responsive {
+        width: 30%;
+      
+    }
     &__number {
         display: flex;
         align-items: center;
@@ -95,25 +105,40 @@
 .list-restaurants {
     display: flex;
     flex-direction: column;
+    margin: auto;
     padding: 20px 0px 50px 0px;
     background-color: darken($white, 3%);
     &__heading {
-        margin: 10% 5% 5% 5%;
+        width: $mainwidth;
+        margin: 20px auto;
         @include index-heading;
+    }
+    &__container {
+        width: $mainwidth;
+        margin: auto;
+        @include desktop-responsive {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
     }
 }
 
 .restaurant-card {
     display: flex;
     flex-direction: column;
-    width: $mainwidth;
     height: 250px;
     margin: auto;
     margin-bottom: 5%;
     border-radius: 15px;
     background-color: $white;
     @include object-shadow;
-    transition: 0.3s; 
+    transition: 0.3s;
+    @include desktop-responsive {
+        width: 48%;
+        margin: 0;
+        margin-bottom: 4%;
+    } 
     &:hover {
         box-shadow: 0px 5px 8px darken($shadow, 10%);
     } 
