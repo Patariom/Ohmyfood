@@ -4,8 +4,11 @@
     width: 100%;
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     background-color: $white;
-    animation: loading-appear 5s 500ms both ease-in-out;
+    opacity: 0.95;
+    animation: loading-appear 4s both ease-in-out;
     z-index: 21;
     display:flex;
     align-items:center;
@@ -17,12 +20,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280px;
-    height: 280px;
+    width: 290px;
+    height: 290px;
     border-radius: 50%;
     background: $gradient-loader;
+    z-index: 0;
     animation: rotate-gradient 3s infinite;
-    &::before {
+    &::after {
+        z-index:0;
         position: absolute;
         content:"";
         width: 85%;
@@ -30,18 +35,25 @@
         background-color: $white;
         border-radius: 50%;
     }
-    &__icons{
+    &__border {
+        z-index: -1;
+        position: absolute;
+        width: 290px;
+        height: 290px;
+        background-color: darken($white, 10%);
+        border-radius: 50%;
+        }
+    &__plate{
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 200px;
-        height: 200px;
-        border: 4px solid lighten($color-tertiary,10%);
-        background-color: $color-tertiary;
+        width: 120px;
+        height: 120px;
+        border: 4px solid darken($white,60%);
+        background-color: darken($white,65%);
         margin: 0% 2%;
         border-radius: 50%;
-        overflow: hidden;
         z-index: 3;
         &::before {
             position: absolute;
@@ -52,6 +64,7 @@
             border-bottom: 2px solid $white;
             background-color: transparent;
             transform: rotate(-25deg);
+            overflow: hidden;
             content:"";
         }
         &::after {
@@ -61,10 +74,35 @@
             height: 75%;
             border-radius: 50%;
             border: 4px solid $white;
-            background-color: darken($color-tertiary,10%);
+            background-color: darken($white,75%);
+            overflow: hidden;
             content:"";
         }
-        .icons1 {
+        &__knife {
+            position: absolute;
+            right: -40%;
+            height: 120px;
+            width: auto;
+            z-index: 6;
+            opacity: 1;
+            animation: ustensils-moving 500ms $icons-delay;
+            & img {
+                height: 100%;
+            }
+        }
+        &__fork {
+            position: absolute;
+            left: -40%;
+            height: 120px;
+            width: auto;
+            z-index: 5;
+            opacity: 1;
+            animation: ustensils-moving 500ms $icons-delay*2;
+            & img {
+                height: 100%;
+            }
+        }
+        &__food12 {
             width: 25%;
             height: 25%;
             z-index:1;
@@ -78,11 +116,11 @@
             display: inline-block;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            font-size: 55px;
+            font-size: 40px;
             content:"\f578";
             color: $white;
             transform: translateY(-150px);
-            animation: icons-moving 800ms both;
+            animation: icons-appearing $icons-delay both;
             }
             &::after {
             width: auto;
@@ -90,33 +128,33 @@
             z-index:1;
             position: absolute;
             top: 35%;
-            right: 34%;
+            right: 30%;
             display: inline-block;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            font-size: 55px;
+            font-size: 40px;
             content:"\f7ec";
             color: $white;
             transform: translateY(-150px);
-            animation: icons-moving 800ms 800ms both;
+            animation: icons-appearing $icons-delay $icons-delay both;
             }
         }
-        .icons2 {
+        &__food34{
             width: auto;
             height: auto;
             z-index:1;
             &::before {
             position: absolute;
             top: 35%;
-            right: 35%;
+            right: 33%;
             display: inline-block;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            font-size: 55px;
+            font-size: 40px;
             content:"\f7ef";
             color: $white;
             transform: translateY(-150px);
-            animation: icons-moving 800ms 1600ms both;
+            animation: icons-appearing $icons-delay $icons-delay*2 both;
             }
             &::after {
             position: absolute;
@@ -125,11 +163,11 @@
             display: inline-block;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            font-size: 55px;
+            font-size: 40px;
             content:"\f5d1";
             color: $white;
             transform: translateY(-150px);
-            animation: icons-moving 800ms 2400ms both;
+            animation: icons-appearing $icons-delay $icons-delay*3 both;
             }
         }
     }

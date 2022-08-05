@@ -36,7 +36,7 @@
     }
 
     80% {
-        opacity: (.90);
+        opacity: (1);
         transform: scale(1);
     }
     85% {
@@ -57,7 +57,7 @@
 /* Loading */
 @keyframes loading-appear {
     50% {
-        opacity: 1;
+        opacity: 0.95;
     }
 
     99% {
@@ -77,7 +77,7 @@
         transform: rotate(360deg);
     }
 }
-@keyframes icons-moving {
+@keyframes icons-appearing {
     0% {
         transform: translateY(-150px);
         opacity: 0;
@@ -108,5 +108,16 @@
         transform: translateY(+150px);
         opacity: 0;
         animation-timing-function: cubic-bezier(.5,.78,.83,.67);
+    }
+}
+
+@keyframes ustensils-moving {
+    0%{
+        transform: translateY(-5px);
+        animation-timing-function: linear;
+    }
+    100% {
+        transform: translateY(5px);
+        animation-timing-function: linear;
     }
 }

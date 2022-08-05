@@ -6,7 +6,7 @@ $white: #ffffff;
 $shadow : #d5d5d5;
 
 /* Gradient */
-$gradient-loader : linear-gradient(to top, $color-secondary, lighten($color-primary,30%));
+$gradient-loader : linear-gradient(to top, lighten($color-primary, 10%), $color-secondary, transparent, transparent);
 
 
 /* Degree Gradient */
@@ -15,7 +15,8 @@ $degree: 165deg;
 /* Width */
 $mainwidth: 90%;
 
-/* Animation delay */
+/* Loading spinner animation delay */
+$icons-delay: 700ms;
 
 /* Responsive */
 $breakpoints:(
