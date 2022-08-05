@@ -34,10 +34,9 @@
     15% {
         opacity: (.25);
     }
-    75% {
-        opacity: (.90);
-    }
+
     80% {
+        opacity: (.90);
         transform: scale(1);
     }
     85% {
@@ -46,11 +45,11 @@
     }
     95% {
         opacity: (1);
-        transform: scale(1.08);
+        transform: scale(1.05);
     }
     100% {
         opacity: (1);
-        transform: scale(1.05);
+        transform: scale(1);
     }
 }
 

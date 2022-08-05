@@ -31,6 +31,10 @@
                 font-size: 40px;
                 width: 95%;
             }
+            @include tablet-responsive {
+                font-size: 35px;
+                width: 95%;
+            }
         }
     }
     &__course-container {

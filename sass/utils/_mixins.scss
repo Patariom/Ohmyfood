@@ -1,10 +1,15 @@
-/* Boutons */
+/* Gradient */
+@mixin gradient ($orientation:$degree) {
+    background: linear-gradient($orientation, $color-secondary, $color-primary);
+}
 
 /* Shadow */
 @mixin object-shadow {
     box-shadow: 0px 5px 8px $shadow;
 }
 
+
+/* Responsive */
 @mixin tablet-responsive {
     @media all and (min-width: map-get($breakpoints, tablet)){
         @content;

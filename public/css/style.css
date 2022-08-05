@@ -1,10 +1,12 @@
 /* Colors */
 /* Gradient */
+/* Degree Gradient */
 /* Width */
 /* Animation delay */
 /* Responsive */
-/* Boutons */
+/* Gradient */
 /* Shadow */
+/* Responsive */
 /* Courses apparition */
 @keyframes fade-in {
   0% {
@@ -39,10 +41,8 @@
   15% {
     opacity: 0.25;
   }
-  75% {
-    opacity: 0.9;
-  }
   80% {
+    opacity: 0.9;
     transform: scale(1);
   }
   85% {
@@ -51,11 +51,11 @@
   }
   95% {
     opacity: 1;
-    transform: scale(1.08);
+    transform: scale(1.05);
   }
   100% {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1);
   }
 }
 /* Loading */
@@ -135,7 +135,7 @@ a {
   height: 50px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(to right bottom, #FF79DA, #9356dc);
+  background: linear-gradient(165deg, #FF79DA, #9356dc);
   color: white;
   font-weight: 500;
   box-shadow: 0px 5px 8px #d5d5d5;
@@ -161,19 +161,19 @@ a {
   padding: 0;
   border: transparent 0px solid;
   background-color: transparent;
-  font-size: 25px;
+  -webkit-text-stroke: 1px white;
   cursor: pointer;
 }
-.button-like:hover::after {
+.button-like:hover::before {
   z-index: 2;
   overflow: hidden;
-  animation: heart-fill 500ms forwards;
+  animation: heart-fill 700ms forwards;
 }
-.button-like::after {
+.button-like::before {
   z-index: -1;
   opacity: 0;
   position: absolute;
-  top: 0;
+  top: 1;
   right: 0;
   bottom: 0;
   left: 0;
@@ -182,9 +182,10 @@ a {
   font-size: 27px;
   content: "\f004";
   color: transparent;
-  background: linear-gradient(to right bottom, #FF79DA, #9356dc);
+  background: linear-gradient(45deg, #FF79DA, #9356dc);
   background-clip: text;
   transform-origin: bottom;
+  -webkit-text-stroke: 0px;
 }
 
 .loading-spinner-container {
@@ -352,7 +353,7 @@ body {
   top: 35%;
   font-size: 20px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .header__returnarrow {
     font-size: 28px;
   }
@@ -372,7 +373,7 @@ body {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .footer__heading {
     font-size: 26px;
   }
@@ -451,7 +452,7 @@ body {
   padding-bottom: 20px;
   margin: auto;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .explain-operation__list {
     width: 98%;
     flex-direction: row;
@@ -470,7 +471,7 @@ body {
   border-radius: 20px;
   transition: 0.3s;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .explain-step {
     width: 30%;
   }
@@ -601,7 +602,7 @@ body {
   width: 100%;
   height: 250px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .page-restaurant__image {
     height: 400px;
   }
@@ -630,9 +631,15 @@ body {
   width: 85%;
   font-family: "Shrikhand", cursive;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .menu__heading h1 {
     font-size: 40px;
+    width: 95%;
+  }
+}
+@media all and (min-width: 768px) {
+  .menu__heading h1 {
+    font-size: 35px;
     width: 95%;
   }
 }
@@ -666,7 +673,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .course-list__heading {
     font-size: 22px;
   }
