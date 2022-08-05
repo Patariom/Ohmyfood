@@ -5,9 +5,7 @@
         font-size: 32px;
         @include cursive-heading;
         text-align: center;
-        @include desktop-responsive {
-            font-size: 40px;
-        }
+
     }
     &--witharrow {
         position: relative;
@@ -23,7 +21,7 @@
         top: 35%;
         font-size: 20px;
         @include desktop-responsive {
-            font-size: 35px;
+            font-size: 28px;
         }
     }
 }

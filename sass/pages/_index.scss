@@ -62,14 +62,13 @@
     align-items : center;
     height: 70px;
     gap: 4%;
-    margin: 2% 0%;
+    margin: 15px 0px;
     background-color: darken($white, 3%);
     @include object-shadow;
     border-radius: 20px; 
     transition: 0.3s;
     @include desktop-responsive {
         width: 30%;
-      
     }
     &__number {
         display: flex;
@@ -116,7 +115,7 @@
     &__container {
         width: $mainwidth;
         margin: auto;
-        @include desktop-responsive {
+        @include desktop-responsive; @include tablet-responsive {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
@@ -134,7 +133,7 @@
     background-color: $white;
     @include object-shadow;
     transition: 0.3s;
-    @include desktop-responsive {
+    @include desktop-responsive; @include tablet-responsive  {
         width: 48%;
         margin: 0;
         margin-bottom: 4%;

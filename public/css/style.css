@@ -338,11 +338,6 @@ body {
   font-family: "Shrikhand", cursive;
   text-align: center;
 }
-@media all and (min-width: 1024px) {
-  .header__logo {
-    font-size: 40px;
-  }
-}
 .header--witharrow {
   position: relative;
 }
@@ -357,9 +352,9 @@ body {
   top: 35%;
   font-size: 20px;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .header__returnarrow {
-    font-size: 35px;
+    font-size: 28px;
   }
 }
 
@@ -369,14 +364,6 @@ body {
   background-color: #404040;
   color: #ffffff;
 }
-@media all and (min-width: 1024px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-  }
-}
 .footer p {
   margin: 5px 0px;
 }
@@ -385,7 +372,7 @@ body {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .footer__heading {
     font-size: 26px;
   }
@@ -408,20 +395,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-@media all and (min-width: 1024px) {
-  .footer__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 80px;
-  }
-  .footer__info a {
-    width: 140px;
-  }
-  .footer__info :nth-child(1) {
-    text-align: end;
-  }
 }
 
 /* Info Localisation Div */
@@ -478,7 +451,7 @@ body {
   padding-bottom: 20px;
   margin: auto;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .explain-operation__list {
     width: 98%;
     flex-direction: row;
@@ -491,13 +464,13 @@ body {
   align-items: center;
   height: 70px;
   gap: 4%;
-  margin: 2% 0%;
+  margin: 15px 0px;
   background-color: #f7f7f7;
   box-shadow: 0px 5px 8px #d5d5d5;
   border-radius: 20px;
   transition: 0.3s;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .explain-step {
     width: 30%;
   }
@@ -549,7 +522,7 @@ body {
   width: 90%;
   margin: auto;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   .list-restaurants__container {
     display: flex;
     flex-flow: row wrap;
@@ -568,7 +541,7 @@ body {
   box-shadow: 0px 5px 8px #d5d5d5;
   transition: 0.3s;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   .restaurant-card {
     width: 48%;
     margin: 0;
@@ -628,7 +601,7 @@ body {
   width: 100%;
   height: 250px;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .page-restaurant__image {
     height: 400px;
   }
@@ -657,13 +630,13 @@ body {
   width: 85%;
   font-family: "Shrikhand", cursive;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .menu__heading h1 {
     font-size: 40px;
     width: 95%;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   .menu__course-container {
     display: flex;
     align-items: flex-start;
@@ -680,7 +653,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   .course-list {
     width: 32%;
   }
@@ -693,7 +666,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 992px) {
   .course-list__heading {
     font-size: 22px;
   }
@@ -713,7 +686,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 3% 0%;
+  margin: 10px 0px;
   padding: 0;
   background-color: #ffffff;
   border-radius: 15px;
