@@ -1,5 +1,6 @@
 .header {
     padding: 2%;
+
     &__logo {
         margin: 0;
         font-size: 32px;
@@ -7,22 +8,24 @@
         text-align: center;
 
     }
+
     &--witharrow {
         position: relative;
     }
+
     &__returnarrow {
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 5%;    
+        left: 5%;
         height: 20px;
         width: 20px;
         top: 35%;
         font-size: 20px;
+
         @include desktop-responsive {
             font-size: 28px;
         }
     }
 }
-

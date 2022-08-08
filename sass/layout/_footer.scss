@@ -3,21 +3,26 @@
     padding: 5% 5%;
     background-color: darken($white, 75%);
     color: $white;
+
     & p {
         margin: 5px 0px;
     }
+
     &__heading {
         margin: 0px 0px 15px 0px;
         @include cursive-heading;
         font-size: 18px;
+
         @include desktop-responsive {
             font-size: 26px;
-        } 
+        }
     }
+
     &__nav {
         display: flex;
         align-items: center;
         font-weight: map-get($font-weight, medium);
+
         &__icons {
             margin-right: 15px;
             display: flex;
@@ -27,6 +32,7 @@
             height: 16px;
         }
     }
+
     &__info {
         margin-top: 10px;
         display: flex;
@@ -34,5 +40,3 @@
         gap: 10px;
     }
 }
-
-

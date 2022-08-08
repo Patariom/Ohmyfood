@@ -11,7 +11,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/df053594e0.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="public/images/logo/omf-favicon.png">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/prefixed/style.css">
     <title>Accueil - ohmyfood</title>
 </head>
 
@@ -74,11 +74,11 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <div class="restaurant-card__info__like">
-                            <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
-                        </div>
                     </div>
                 </a>
+                <div class="restaurant-card__like">
+                    <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
+                </div>
             </article>
             <article class="restaurant-card">
                 <a href="la-note-enchantee.html">
@@ -93,11 +93,11 @@
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
-                        <div class="restaurant-card__info__like">
-                            <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
-                        </div>
                     </div>
                 </a>
+                <div class="restaurant-card__like">
+                    <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
+                </div>
             </article>
             <article class="restaurant-card">
                 <a href="a-la-francaise.html">
@@ -109,11 +109,11 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <div class="restaurant-card__info__like">
-                            <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
-                        </div>
                     </div>
                 </a>
+                <div class="restaurant-card__like">
+                    <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
+                </div>
             </article>
             <article class="restaurant-card">
                 <a href="le-delice-des-sens.html">
@@ -125,15 +125,16 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <div class="restaurant-card__info__like">
-                            <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
-                        </div>
                     </div>
                 </a>
+                <div class="restaurant-card__like">
+                    <button type="submit" class="button-like"><i class="far fa-heart"></i></button>
+                </div>
             </article>
         </div>
     </section>
 
+    <!--///// Loading spinner /////-->
     <div class="loading-spinner-container">
         <div class="loading-spinner">
         </div>
@@ -141,13 +142,13 @@
         </div>
         <div class="loading-spinner__plate">
             <div class="loading-spinner__plate__knife">
-                <img src="public/images/loading spinner/loading-spinner__knife.png" alt="Le délice des sens" />
+                <img src="public/images/loading-spinner/loading-spinner__knife.png" alt=""/>
             </div>
             <div class="loading-spinner__plate__fork">
-                <img src="public/images/loading spinner/loading-spinner__fork.png" alt="Le délice des sens" />
+                <img src="public/images/loading-spinner/loading-spinner__knife.png" alt=""/>
             </div>
             <div class="loading-spinner__plate__food12"></div>
-            <div class="loading-spinner__plate__food23"></div>
+            <div class="loading-spinner__plate__food34"></div>
         </div>
     </div>
 

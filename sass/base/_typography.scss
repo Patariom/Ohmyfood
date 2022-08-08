@@ -18,15 +18,18 @@ $font-weight: (
 
 
 /* Headings */
+
 .heading--cursive {
     font-family: 'Shrikhand', cursive;
 }
 
 @mixin index-heading {
-    font-size: 24px;
+    font-size: 23px;
+    line-height: 1;
     font-weight: map-get($font-weight, bold);
 }
 
 @mixin cursive-heading {
+    font-size: 27px;
     font-family: 'Shrikhand', cursive;
 }

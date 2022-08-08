@@ -8,7 +8,6 @@ $shadow : #d5d5d5;
 /* Gradient */
 $gradient-loader : linear-gradient(to top, lighten($color-primary, 10%), $color-secondary, transparent, transparent);
 
-
 /* Degree Gradient */
 $degree: 165deg;
 
@@ -16,10 +15,10 @@ $degree: 165deg;
 $mainwidth: 90%;
 
 /* Loading spinner animation delay */
-$icons-delay: 700ms;
+$icons-delay: 610ms;
 
 /* Responsive */
-$breakpoints:(
+$breakpoints: (
     tablet: 768px,
     desktop: 1024px,
 );
