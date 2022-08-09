@@ -9,7 +9,7 @@
     font-weight: map-get($font-weight, medium);
     @include object-shadow;
     cursor: pointer;
-    transition: 0.3s;
+    transition: opacity 300ms ease-in-out, box-shadow 200ms 100ms ease-in-out;
 
     &:hover {
         opacity: 0.88;
@@ -38,8 +38,7 @@
     &:hover {
         &::after {
             z-index: 1;
-            overflow: hidden;
-            animation: heart-fill 900ms both ease-in-out;
+            animation: heart-fill 900ms forwards cubic-bezier(.65,1.01,.98,1.06);
         }
     }
 
