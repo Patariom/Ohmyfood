@@ -1,6 +1,6 @@
 # OhMyFood
 
-<img alt="Simulation des différentes pages du site OhMyFood" src="">
+<img alt="Simulation des différentes pages du site OhMyFood" src="https://github.com/Patariom/Ohmyfood/blob/main/220208_OhMyFood_mockup.png?raw=true">
 
 ## English
 
